@@ -3,7 +3,7 @@
 n=int(input("请输入一个大于0的自然数："))
 m=0  #计数
 while(n>0):
-    for i in range(2,n-1):
+    for i in range(2,n):  ##这里我之前写的 range(2,n-1) 错了，n-1 只能取到n-2
         if(n%i==0):
             print(n,"不是素数")
             break
@@ -12,7 +12,8 @@ while(n>0):
 
     if(m==(n-2)):   #全都无法被整除
         print(n,"是素数")
-        break
+        
+    break
         
 else:
     print("输入的不是大于零的自然数，请重新输入！")
