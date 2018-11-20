@@ -14,8 +14,8 @@ def main():
         s.add(i)
     for i in range(2,n+1):
 
-        #这里比较难，删除除i之外i的所有倍数
-        if i in s:
+        #这里比较难，删除除i之外i的所有倍数  (筛法)
+        if i in s:  #之所以有这一句是因为如果i不在集合中，说明i的倍数已经被完全删除了，比如6，其实在3的时候已经把6倍数都删掉了，节约时间
             for k in range(2*i,n+1,i):
                 if k in s:
                     s.remove(k)
