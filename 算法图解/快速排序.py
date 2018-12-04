@@ -18,6 +18,7 @@ def quicksort(arr):
         less = [i for i in arr[1:] if i <= pivot]
         bigger = [i for i in arr[1:] if i > pivot]
         #???????为什么可以这么写呢
+        """哈哈哈我知道了！这个是python的列表生成式！"""
 
         #这里不小心报错了
         #return quicksort(less)+pivot+quicksort(bigger)
